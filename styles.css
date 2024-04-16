@@ -1,0 +1,54 @@
+body {
+    background-color: #D8F2EF;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.header img {
+    width: 80px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.navigation {
+    margin-left: auto;
+}
+
+.navigation a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.welcome-section {
+    padding: 20px;
+    text-align: center; /* Center the content horizontally */
+}
+.contact-section {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Center the content horizontally */
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
