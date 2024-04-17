@@ -1,0 +1,145 @@
+body {
+    background-color: #D8F2EF;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px; 
+}
+
+.header img {
+    width: 80px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.navigation {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.navigation a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+.welcome-section {
+    padding: 20px;
+    text-align: center; /* Center the content horizontally */
+    margin-bottom: 200px; 
+    font-size: 40px;
+}
+
+.upcoming-events-heading {
+    text-align: center;
+    font-size: 30px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.event-heading {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 100px;
+}
+
+.event-date,
+.event-time,
+.event-meeting,
+.event-rsvp,
+.event-status {
+    flex: 1;
+    padding: 0 10px;
+}
+.event-link {
+    flex: 1;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.event-link a {
+    text-decoration: none;
+    color: blue;
+}
+
+.event-link a:hover {
+    text-decoration: underline;
+}
+
+
+.events-container {
+    width: 300px; /* Adjust the width as needed */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: auto; /* Enable scrolling */
+}
+
+.events-list {
+    padding: 50px;
+    margin: 0;
+    list-style: none;
+    font-size: 30px;
+}
+
+.event {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.event:last-child {
+    border-bottom: none; /* Remove border from last event */
+}
+
+
+.contact-section {
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    text-align: center; /* Center the content horizontally */
+    margin-top: 20px; /* Add margin to create space above */
+    margin-bottom: 20px; 
+}
+
+.contact-section p {
+    margin-bottom: 50px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-icons img {
+    width: 40px;
+    margin: 0 30px;
+    margin-bottom: 40px;
+}
