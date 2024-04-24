@@ -1,93 +1,115 @@
-body {
-    background-color: #D8F2EF;
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
+/* General Body and HTML Styling */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Apply initial state for animation to all sections marked with .section */
+.section {
+    opacity: 0;  /* Start elements as fully transparent */
+    transform: translateY(20px);  /* Start slightly off-position for effect */
+    animation: fadeInUp 1.5s ease-out forwards;  /* Animation will bring elements to final visible state */
+}
+
+body {
+    background-color: #D8F2EF;
+    font-family: 'Lato', sans-serif; /* Updated to use Lato */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: #D8F2EF;
     color: #fff;
     padding: 10px 20px;
-    margin-bottom: 20px; 
+    margin-bottom: 0px;
 }
 
 .header img {
-    width: 80px; /* Adjust the width of the logo */
+    width: 300px; /* Adjust the width of the logo */
     height: auto; /* Maintain aspect ratio */
 }
 
-.navigation {
+/* Navigation Styles */
+.navigation, .navigation a {
     margin-left: 10px;
-    color: #fff;
-    text-decoration: none;
     margin-right: 10px;
-}
-
-.navigation a {
-    margin-left: 10px;
-    color: #fff;
+    color: #000;
     text-decoration: none;
-}
-.welcome-section {
-    padding: 20px;
-    text-align: center; /* Center the content horizontally */
-    margin-bottom: 200px; 
-    font-size: 40px;
-}
-
-.upcoming-events-heading {
-    text-align: center;
-    font-size: 30px; /* Adjust the font size as needed */
-    margin-bottom: 20px; /* Add some space below the heading */
-}
-
-.event-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f0f0f0;
-    font-weight: bold;
-    padding: 10px 0;
     font-size: 20px;
 }
 
-.event-heading {
-    flex: 1;
-    padding: 0 10px;
+/* Welcome Section Styling */
+.welcome-section {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0px; /* Reduced from 200px to reduce space below the section */
+    font-size: 24px;
+    background-color: #0c9d8e; /* Black background */
+    color: #fff; /* White text for contrast */
+}
+
+@media (max-width: 768px) {
+    .welcome-section {
+        font-size: 20px; /* Slightly larger for mobile readability */
+    }
+}
+
+/* Event Listing Styles */
+.upcoming-events-heading {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 0px; /* Ensured there's some spacing above the header */
+    padding: 10px 0; /* Added padding for better spacing */
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds subtle shadow for depth */
 }
 
 .event {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    font-size: 100px;
+    font-size: 20px; /* Normalized font size */
+    align-items: center;
 }
 
-.event-date,
-.event-time,
-.event-meeting,
-.event-rsvp,
-.event-status {
-    flex: 1;
-    padding: 0 10px;
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: left; /* Horizontally align content */
 }
-.event-link {
+
+.event-heading, .event-date, .event-time, .event-meeting, .event-rsvp, .event-status, .event-link {
     flex: 1;
     padding: 0 10px;
-    text-align: center;
 }
 
 .event-link a {
-    text-decoration: none;
     color: blue;
+    text-decoration: none;
 }
 
 .event-link a:hover {
     text-decoration: underline;
 }
-
 
 .events-container {
     width: 300px; /* Adjust the width as needed */
@@ -95,34 +117,28 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    overflow: auto; /* Enable scrolling */
-}
-
-.events-list {
-    padding: 50px;
-    margin: 0;
-    list-style: none;
-    font-size: 30px;
+    overflow: auto;
 }
 
 .event {
     padding: 10px;
     border-bottom: 1px solid #ccc;
-    font-size: 16px;
+    font-size: 16px; /* Normalized font size */
+    align-items: center;
 }
 
 .event:last-child {
     border-bottom: none; /* Remove border from last event */
 }
 
-
+/* Contact Section Styling */
 .contact-section {
     background-color: #000;
     color: #fff;
     padding: 50px;
-    text-align: center; /* Center the content horizontally */
-    margin-top: 20px; /* Add margin to create space above */
-    margin-bottom: 20px; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 .contact-section p {
@@ -131,77 +147,31 @@ body {
 
 .contact-icons {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* This centers the children horizontally within the container */
+    align-items: center; /* This centers the children vertically (if needed) */
+    margin: auto; /* Center the entire flex container if it does not naturally expand to the full width */
+    width: 100%; /* Ensures the container spans the full width of its parent */
 }
 
 .contact-icons img {
-    width: 40px;
-    margin: 0 30px;
-    margin-bottom: 40px;
+    width: 50px; /* Adjust if necessary for your design */
+    margin: 0 30px; /* Space between the logos */
+    margin-bottom: 40px; /* Space below the logos, if the container's height allows */
 }
 
-body {
-    background-color: #D8F2EF;
-    margin: 0; /* Reset default margin */
-    padding: 0; 
-    font-family: var(--bs-body-font-family);/* Reset default padding */
-}
+/* Centering iframe for Attendance page */
 .center-iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Adjust the height as needed */
-  }
-  
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    margin-bottom: 50px; 
+    height: 100%;
 }
 
-.header img {
-    width: 80px; /* Adjust the width of the logo */
-    height: auto; /* Maintain aspect ratio */
+.events-list {
+    padding: 20px;
+    margin-top: 0px; /* Adjusted top margin to give space after the header */
+    list-style: none; /* Removes bullet points */
+    font-size: 30px; /* Adjust font size as necessary */
+    background-color: #D8F2EF; /* Light background for contrast */
 }
-
-.navigation {
-    margin-left: auto;
-}
-
-.navigation a {
-    margin-left: 10px;
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.contact-section {
-    background-color: #000;
-    color: #fff;
-    padding: 50px;
-    text-align: center; /* Center the content horizontally */
-    margin-top: 20px; /* Add margin to create space above */
-    margin-bottom: 20px; 
-}
-
-.contact-section p {
-    margin-bottom: 50px;
-}
-
-.contact-icons {
-    display: flex;
-    justify-content: center;
-}
-
-.contact-icons img {
-    width: 40px;
-    margin: 0 30px;
-    margin-bottom: 40px;
-}
-
 
